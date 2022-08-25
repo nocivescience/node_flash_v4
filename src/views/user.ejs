@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include _header.ejs%>
+</head>
+<body>
+    <%- include _navbar.ejs%>
+    <div class="w-25 offset-4 mt-4 hight">
+        <form action="/user_register" method="POST">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Name</label>
+              <input type="text" name="nombre" class="form-control" id="exampleInputEmail1" placeholder="write your name" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Surfane</label>
+              <input type="text" placeholder="write your surname" name="apellido" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Age</label>
+                <input type="number" placeholder="write your age" name="edad" class="form-control" id="exampleInputPassword1">
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</body>
+</html>
