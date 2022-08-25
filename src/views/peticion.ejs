@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include _header.ejs%>
+</head>
+<body>
+    <%- include _navbar.ejs%>
+    <div class="">
+        <div class="d-flex justify-content-center mt-4">
+            <form action="/peticion_register" method="POST">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Artículo</label>
+                  <input type="text" name="articulo" class="form-control" 
+                  placeholder="nombre del producto"
+                  id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Descripción</label>
+                  <textarea type="text" name="descripcion" class="form-control" 
+                  placeholder="describa el producto"
+                  id="exampleInputPassword1"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

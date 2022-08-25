@@ -9,15 +9,15 @@
 </head>
 <body>
     <%- include _navbar.ejs%>
-    <%if (articulos){%>
-    <div class="d-flex justify-content-center mt-5">
+    <% if(sexualidad) {%>
+    <div class="d-flex justify-content-center pt-5">
         <div class="card" style="width: 18rem;">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Article: <%= articulos.articulo%></li>
-              <li class="list-group-item">Descripción: <%= articulos.descripcion%></li>
+              <li class="list-group-item">Tu sexo: <%= sexualidad.sexo %></li>
+              <li class="list-group-item">A Tu posición: <%= sexualidad.posicion%></li>
             </ul>
-          </div>
+        </div>
     </div>
-    <%}%>
+    <% } %>
 </body>
 </html>

@@ -1,6 +1,6 @@
 const router=require('express').Router();
-router.get('/peticion_profile',(req,res)=>{
-    res.render('peticion_profile')
+router.get('/peticion',(req,res)=>{
+    res.render('peticion')
 });
 router.post('/peticion_register',(req,res)=>{
     const {articulo,descripcion}=req.body;
@@ -9,5 +9,7 @@ router.post('/peticion_register',(req,res)=>{
     res.redirect('/peticion_profile')
 });
 router.get('/peticion_profile',(req,res)=>{
-    const articulo= req.session.articulo
+    const articulos= req.session.articulo;
+    res.render('peticion_profile',{articulos})
 })
+module.exports= router;

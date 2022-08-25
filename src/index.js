@@ -24,6 +24,8 @@ app.use((req, res, next) => {
 
 app.use(require('./routes/index'));
 app.use(require('./routes/user'));
+app.use(require('./routes/peticion'));
+app.use(require('./routes/tendencia'));
 
 app.listen(3000);
 console.log('Server on port 3000');''
